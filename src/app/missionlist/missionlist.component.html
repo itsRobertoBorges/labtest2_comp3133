@@ -1,0 +1,17 @@
+<div *ngFor="let flight of flights">
+    <table style="width:100%">
+      <tr>
+        <td style="width:35%"><img src={{flight.links.mission_patch_small}} width="400px" height="250px"></td>
+        <td>
+          <h3>{{flight.mission_name}}</h3>
+          <br>
+          <p>{{flight.launch_year}}</p>
+        </td>
+      </tr>
+    </table>
+    <div>
+      <h3>Details: </h3>
+      <br>
+      <p>{{flight.details}} <a routerLink="/details/{{flight.flight_number}}">View more</a>
+    </div>
+  </div>
